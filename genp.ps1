@@ -14,11 +14,11 @@ function Set-FirewallRules {
         if ($enable) {
             # Enable rule
             Enable-NetFirewallRule -Name $rule.Name
-            Write-Host "Włączono regułę: $($rule.DisplayName)"
+            Write-Host "Enabled: $($rule.DisplayName)"
         } else {
             # Disable rule
             Disable-NetFirewallRule -Name $rule.Name
-            Write-Host "Wyłączono regułę: $($rule.DisplayName)"
+            Write-Host "Disabled: $($rule.DisplayName)"
         }
     }
 }
